@@ -1,0 +1,135 @@
+/* --- Variables de couleurs --- */
+:root {
+    --main-bg-color: #f9f4ef; /* Beige doux */
+    --accent-color: #6a1b9a; /* Violet profond */
+    --secondary-color: #ffb74d; /* Orange pastel doré */
+    --text-color: #333333; /* Noir doux pour le texte */
+    --link-color: #6a1b9a; /* Violet pour les liens */
+    --link-hover-color: #ab47bc; /* Violet clair pour le survol */
+}
+
+/* --- Reset de base --- */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Style général --- */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- En-tête --- */
+header {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Section principale --- */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Boutons --- */
+button, .btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* --- Liens --- */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* --- Galerie (Voyages Enchantés) --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
